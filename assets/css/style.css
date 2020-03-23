@@ -1,0 +1,13 @@
+.fz-14 {
+  font-size: 1.4rem;
+}
+
+/* para que se posicione abajo de todo el footer */
+.footer {
+  bottom: 0;
+  width: 100%;
+}
+
+.text-white {
+  color: #ffffff;
+}

@@ -4,20 +4,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Title</title>
+  <title>🍔 Product App</title>
   <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
+
+  <!-------------------
+    $NAV BAR
+  --------------------->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="index.html">Product List</a>
+    <div class="container">
+      <a href="/" class="navbar-brand">
+        <h1>
+          🍔 Products App
+        </h1>
+      </a>
+    </div>
   </nav>
 
-  <div class="container">
-    <h1>Hola mundo 👨‍🎤 </h1>
-  </div>
 
+  <!-------------------
+    $MAIN
+  --------------------->
+  <main class="container mt-5" role="main">
+    <div id="App" class="row">
+      <!-------------------
+        $FORM
+      --------------------->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">
+            <h2 class="text-center fz-14">Agregar Producto</h2>
+          </div>
 
+          <form id="product-form" class="card-body">
+            <div class="form-group">
+              <label class="control-label" for="product-name">Nombre del Producto</label>
+              <input class="form-control" type="text" name="product-name" id="product-name" placeholder="Nombre de Producto">
+            </div>
+
+            <div class="form-group">
+              <label class="control-label" for="product-price">Precio</label>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">S/</span>
+                  </div>
+                  <input type="number" class="form-control" step="0.01" name="product-price" id="product-price" min="0" placeholder="1.00" lang="en">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label" for="product-year">Año</label>
+              <input class="form-control" type="number" name="product-year" id="product-year" min="1900" max="2018" value="2018">
+            </div>
+
+            <input class="btn  btn-primary  btn-block" type="submit" value="Save">
+          </form>
+        </div>
+      </div>
+      <!-------------------
+        $LIST
+      --------------------->
+      <div class="col-md-8">
+        lista de productos
+      </div>
+
+    </div>
+  </main>
+
+  <!-------------------
+    $FOOTER
+  --------------------->
+  <footer class="footer  font-small  bg-primary mt-5 text-white">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://github.com/wilderPariona" target="_black" class="text-white"> WilderPariona 🐙 </a>
+    </div>
+    <!-- Copyright -->
+  </footer>
   <script src="./assets/js/index.js"></script>
 </body>
 
