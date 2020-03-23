@@ -1,0 +1,12 @@
+{
+  "name": "product-app",
+  "version": "1.0.0",
+  "description": "Proyecto para crear productos, listarlos y eliminarlos haciendo uso de un local storage",
+  "main": "index.js",
+  "repository": "https://github.com/wilderPariona/product-app-js-OOP",
+  "author": "wilderPariona <jhon.pariona.27@unsch.edu.pe>",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^2.0.1"
+  }
+}
