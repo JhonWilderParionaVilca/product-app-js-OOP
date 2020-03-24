@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🍔 Product App</title>
+  <script src="https://kit.fontawesome.com/50db257ef5.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -28,23 +29,29 @@
   <!-------------------
     $MAIN
   --------------------->
-  <main class="container mt-5" role="main">
+  <main id="main" class="container mt-5" role="main">
     <div id="App" class="row">
       <!-------------------
         $FORM
       --------------------->
       <div class="col-md-4">
+        <!-- titulo card -->
         <div class="card">
           <div class="card-header">
             <h2 class="text-center fz-14">Agregar Producto</h2>
           </div>
 
           <form id="product-form" class="card-body">
+            <!-- name product -->
             <div class="form-group">
               <label class="control-label" for="product-name">Nombre del Producto</label>
-              <input class="form-control" type="text" name="product-name" id="product-name" placeholder="Nombre de Producto">
+              <input required class="form-control" type="text" name="product-name" id="product-name" placeholder="Nombre de Producto">
+              <div id="error">
+
+              </div>
             </div>
 
+            <!-- price -->
             <div class="form-group">
               <label class="control-label" for="product-price">Precio</label>
               <div class="form-group">
@@ -52,26 +59,41 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text">S/</span>
                   </div>
-                  <input type="number" class="form-control" step="0.01" name="product-price" id="product-price" min="0" placeholder="1.00" lang="en">
+                  <input required type="number" class="form-control" step="0.01" name="product-price" id="product-price" min="0" placeholder="Precio" lang="en">
                 </div>
               </div>
             </div>
 
+            <!-- year -->
             <div class="form-group">
               <label class="control-label" for="product-year">Año</label>
-              <input class="form-control" type="number" name="product-year" id="product-year" min="1900" max="2018" value="2018">
+              <input required class="form-control" type="number" name="product-year" id="product-year" min="1900" max="2018" value="2018">
             </div>
 
             <input class="btn  btn-primary  btn-block" type="submit" value="Save">
           </form>
         </div>
       </div>
+
       <!-------------------
         $LIST
       --------------------->
-      <div class="col-md-8">
-        lista de productos
-      </div>
+      <section class="col-md-8">
+        <h2 class="text-center">Lista de Productos</h2>
+        <table class="table  table-hover">
+          <thead>
+            <tr class="bg-primary  text-white">
+              <th scope="col">Producto</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Año</th>
+              <th scope="col"> Eliminar</th>
+            </tr>
+          </thead>
+          <tbody id="list-products">
+
+          </tbody>
+        </table>
+      </section>
 
     </div>
   </main>
